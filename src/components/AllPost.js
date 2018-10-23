@@ -21,9 +21,11 @@ class AllPost extends Component {
     }
 }
 
+const postsData = (state) => state.postReducer;
+
 const mapStateToProps = (state) => {
     return {
-        posts: state.postReducer
+        posts: postsData(state)
     }
 }
 export default connect(mapStateToProps)(AllPost);
